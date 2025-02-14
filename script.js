@@ -14,48 +14,27 @@ const tempBackgroundColor = "#000000"; // Set temporary background color to blac
 
 // Array to store image objects
 const imagePaths = [
-    //solo pics
-    //'/vday9.JPG',
     'vday23.jpg', //her
     'vday26.JPG',//me
-    //'/vday24.JPG', //peets coffee pic
     'vday40.jpg', //her
     'vday27.jpg',//me
-    //'/vday25.JPG',//her
-    'vday28.jpg',//me
-    //early pics
+    'vday28.jpg',//me, nex we have early picsearly pics
     'vday34.JPG',
     'vday41.jpg', //pike couch
-    '/vday31.JPG',//tongues selfie
-    '/vday32.JPG',//leg selfie
-    '/vday3.JPG',//cute formal
-    '/vday33.JPG', //hawaian shirt selfie
-    '/vday30.JPG',//cute library
-    '/vday6.JPG',
-    '/vday11.JPG',
-    // and love grew transition
-    '/vday44.jpg', 
-    '/vday21.JPG', //cute rain jacket pic
-    '/vday14.JPG',
-    '/vday4.JPG',
-    '/vday5.JPG',
-    '/vday7.JPG',
-    '/vday2.jpeg',
-    '/vday15.JPG',
-    //'/vday20.JPG', on bed at whale pic
-    //'/vday13.JPG',//drakes pic
-    '/vday10.JPG',
-    //later pics
-    '/vday8.JPG',
-    '/Users/gradientascent/rdrogin1.github.io/vday1.jpeg',
-    
-    '/vday16.JPG',
-    '/vday43.jpg', //her
-    '/vday12.JPG',
-    '/vday17.JPG',
-    '/vday18.JPG',
-    '/vday19.JPG',
+    'vday31.JPG',//tongues selfie
+    'vday32.JPG',//leg selfie
+    'vday3.JPG',//cute formal
+    'vday33.JPG', //hawaian shirt selfie
+    'vday30.JPG',//cute library
+    'vday6.JPG',
+    'vday11.JPG', // last pic before love grew transition
 ];
+
+// Add event listener to the button
+startButton.addEventListener('click', function() {
+    // Example: Show the canvas
+    audio.play(); // Example: Play the background music
+});
 
 const imageObjects = [];
 
@@ -78,8 +57,14 @@ imagePaths.forEach(path => {
         });
         console.log(`Image loaded: ${path}, width: ${img.width}, height: ${img.height}`);
         if (imagesLoaded === imagePaths.length) {
+            console.log('Button clicked!');
+            alert('Button clicked!');
             // All images are loaded, enable the start button
             startButton.addEventListener("click", () => {
+                //console.log('Button clicked!');
+                //alert('Button clicked!');
+                // Add your additional functionality here
+                canvas.style.display = 'block'; 
                 startButton.style.display = "none"; // Hide the button
                 canvas.style.display = "block"; // Show the canvas
                 audio.play(); // Play the background music
@@ -99,6 +84,8 @@ imagePaths.forEach(path => {
         }
     };
     img.onerror = () => {
+        console.log(imagesLoaded);
+                alert(imagesLoaded);
         console.error(`Failed to load image: ${path}`);
     };
 });

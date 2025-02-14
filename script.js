@@ -15,46 +15,46 @@ const tempBackgroundColor = "#000000"; // Set temporary background color to blac
 // Array to store image objects
 const imagePaths = [
     //solo pics
-    //'/Users/gradientascent/vday/vday9.JPG',
-    '/Users/gradientascent/vday/vday23.jpg', //her
-    '/Users/gradientascent/vday/vday26.JPG',//me
-    //'/Users/gradientascent/vday/vday24.JPG', //peets coffee pic
-    '/Users/gradientascent/vday/vday40.jpg', //her
-    '/Users/gradientascent/vday/vday27.jpg',//me
-    //'/Users/gradientascent/vday/vday25.JPG',//her
-    '/Users/gradientascent/vday/vday28.jpg',//me
+    //'/vday9.JPG',
+    'vday23.jpg', //her
+    'vday26.JPG',//me
+    //'/vday24.JPG', //peets coffee pic
+    'vday40.jpg', //her
+    'vday27.jpg',//me
+    //'/vday25.JPG',//her
+    'vday28.jpg',//me
     //early pics
-    '/Users/gradientascent/vday/vday34.JPG',
-    '/Users/gradientascent/vday/vday41.jpg', //pike couch
-    '/Users/gradientascent/vday/vday31.JPG',//tongues selfie
-    '/Users/gradientascent/vday/vday32.JPG',//leg selfie
-    '/Users/gradientascent/vday/vday3.JPG',//cute formal
-    '/Users/gradientascent/vday/vday33.JPG', //hawaian shirt selfie
-    '/Users/gradientascent/vday/vday30.JPG',//cute library
-    '/Users/gradientascent/vday/vday6.JPG',
-    '/Users/gradientascent/vday/vday11.JPG',
+    'vday34.JPG',
+    'vday41.jpg', //pike couch
+    '/vday31.JPG',//tongues selfie
+    '/vday32.JPG',//leg selfie
+    '/vday3.JPG',//cute formal
+    '/vday33.JPG', //hawaian shirt selfie
+    '/vday30.JPG',//cute library
+    '/vday6.JPG',
+    '/vday11.JPG',
     // and love grew transition
-    '/Users/gradientascent/vday/vday44.jpg', 
-    '/Users/gradientascent/vday/vday21.JPG', //cute rain jacket pic
-    '/Users/gradientascent/vday/vday14.JPG',
-    '/Users/gradientascent/vday/vday4.JPG',
-    '/Users/gradientascent/vday/vday5.JPG',
-    '/Users/gradientascent/vday/vday7.JPG',
-    '/Users/gradientascent/vday/vday2.jpeg',
-    '/Users/gradientascent/vday/vday15.JPG',
-    //'/Users/gradientascent/vday/vday20.JPG', on bed at whale pic
-    //'/Users/gradientascent/vday/vday13.JPG',//drakes pic
-    '/Users/gradientascent/vday/vday10.JPG',
+    '/vday44.jpg', 
+    '/vday21.JPG', //cute rain jacket pic
+    '/vday14.JPG',
+    '/vday4.JPG',
+    '/vday5.JPG',
+    '/vday7.JPG',
+    '/vday2.jpeg',
+    '/vday15.JPG',
+    //'/vday20.JPG', on bed at whale pic
+    //'/vday13.JPG',//drakes pic
+    '/vday10.JPG',
     //later pics
-    '/Users/gradientascent/vday/vday8.JPG',
+    '/vday8.JPG',
     '/Users/gradientascent/rdrogin1.github.io/vday1.jpeg',
     
-    '/Users/gradientascent/vday/vday16.JPG',
-    '/Users/gradientascent/vday/vday43.jpg', //her
-    '/Users/gradientascent/vday/vday12.JPG',
-    '/Users/gradientascent/vday/vday17.JPG',
-    '/Users/gradientascent/vday/vday18.JPG',
-    '/Users/gradientascent/vday/vday19.JPG',
+    '/vday16.JPG',
+    '/vday43.jpg', //her
+    '/vday12.JPG',
+    '/vday17.JPG',
+    '/vday18.JPG',
+    '/vday19.JPG',
 ];
 
 const imageObjects = [];

@@ -30,11 +30,8 @@ const imagePaths = [
     'vday11.JPG', // last pic before love grew transition
 ];
 
-// Add event listener to the button
-startButton.addEventListener('click', function() {
-    // Example: Show the canvas
-    audio.play(); // Example: Play the background music
-});
+console.log('script loaded!');
+alert('script loaded!');
 
 const imageObjects = [];
 
@@ -85,7 +82,9 @@ imagePaths.forEach(path => {
     };
     img.onerror = () => {
         console.log(imagesLoaded);
-                alert(imagesLoaded);
+        console.log('Button clicked!');
+        alert('Button clicked!');
+        alert(imagesLoaded);
         console.error(`Failed to load image: ${path}`);
     };
 });

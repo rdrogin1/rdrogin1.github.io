@@ -248,11 +248,11 @@ function showBlackScreenWithText2() {
     ctx.fillText("Happy Valentines Day Mai", canvas.width / 4 , canvas.height / 3);
 
     setTimeout(()=> {
-        ctx.fillText("Can't Wait For Many More", canvas.width / 4, canvas.height / 2.5);
+        ctx.fillText("Looking Forward to Many More With You", canvas.width / 4, canvas.height / 2.5);
     }, 4000);
 
     setTimeout(()=> {
-        ctx.fillText("Love Reuben <3xxoo", canvas.width / 4 , canvas.height / 2 );
+        ctx.fillText("Love Reuben <3 xxoo", canvas.width / 4 , canvas.height / 2 );
     }, 8000);
         
 }

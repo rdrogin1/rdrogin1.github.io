@@ -14,20 +14,37 @@ const tempBackgroundColor = "#000000"; // Set temporary background color to blac
 
 // Array to store image objects
 const imagePaths = [
-    './vday23.jpg', //her
-    './vday26.JPG',//me
-    './vday40.jpg', //her
-    './vday27.jpg',//me
-    './vday28.jpg',//me, nex we have early picsearly pics
-    './vday34.JPG',
-    './vday41.jpg', //pike couch
-    './vday31.JPG',//tongues selfie
-    './vday32.JPG',//leg selfie
-    './vday3.JPG',//cute formal
-    './vday33.JPG', //hawaian shirt selfie
-    './vday30.JPG',//cute library
+    './vday23.jpg',
+    './vday27.jpg',
+    './vday40.jpg',
+    './vday28.jpg',
+    './vday26.JPG',
+    './vday33.JPG',
+    './vday41.JPG',
+    './vday32.jpg',
+    './vday31.jpg',
+    './vday34.jpg',
+    './vday3.jpg',
+    './vday11.jpg',
     './vday6.JPG',
-    './vday11.JPG', // last pic before love grew transition
+    './vday4.JPG',
+    './vday7.JPG',
+    './vday14.JPG',
+    './vday21.jpg',
+    './vday42.JPG',
+    './vday44.JPG',
+    './vday13.jpg',
+    './vday10.jpg',
+    './vday8.JPG',
+    './vday1.jpeg',
+    './vday43.JPG',
+    './vday16.jpg',
+    './vday18.jpg',
+    './vday2.jpeg',
+    './vday15.jpg',
+    './vday19.jpg',
+    './vday17.jpg',
+    './vday12.jpg'
 ];
 
 //console.log('script loaded!');

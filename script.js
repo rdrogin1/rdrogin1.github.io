@@ -47,7 +47,7 @@ const imagePaths = [
     '/Users/gradientascent/vday/vday10.JPG',
     //later pics
     '/Users/gradientascent/vday/vday8.JPG',
-    '/Users/gradientascent/vday/vday1.jpeg',
+    '/Users/gradientascent/rdrogin1.github.io/vday1.jpeg',
     
     '/Users/gradientascent/vday/vday16.JPG',
     '/Users/gradientascent/vday/vday43.jpg', //her

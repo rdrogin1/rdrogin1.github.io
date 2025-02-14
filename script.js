@@ -23,7 +23,7 @@ const imagePaths = [
     './vday41.JPG',
     './vday32.jpg',
     './vday31.jpg',
-    './vday34.jpg',
+    './vday34.JPG',
     './vday3.jpg',
     './vday11.jpg',
     './vday52.jpg',

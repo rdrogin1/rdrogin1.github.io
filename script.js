@@ -82,10 +82,9 @@ imagePaths.forEach(path => {
     };
     img.onerror = () => {
         console.log(imagesLoaded);
-        console.log('Button clicked!');
-        alert('Button clicked!');
+        console.log('Failed load!');
+        alert(`Failed to load image: ${path}`);
         alert(imagesLoaded);
-        console.error(`Failed to load image: ${path}`);
     };
 });
 

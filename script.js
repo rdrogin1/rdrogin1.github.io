@@ -102,7 +102,7 @@ imagePaths.forEach(path => {
                 // Pause before starting the animation and changing the background color back
                 setTimeout(() => {
                     animate(); // Start the animation after a delay
-                }, 6040); // 1040 milliseconds = 1.04 seconds, i like 6040 for the time
+                }, 6200); // 1040 milliseconds = 1.04 seconds, i like 6040 for the time
             });
         
    
@@ -231,7 +231,7 @@ function showBlackScreenWithText() {
     ctx.fillRect(0, 0, canvas.width, canvas.height);
     ctx.fillStyle = "white";
     ctx.font = "48px serif";
-    ctx.fillText("And Love Grew...", canvas.width / 2 + 100, canvas.height / 2);
+    ctx.fillText("And Love Grew...", canvas.width / 3 , canvas.height / 2);
     setTimeout(() => {
         imagesShown = maxImagesBeforePause+2;
          // Reset the counter
@@ -245,14 +245,14 @@ function showBlackScreenWithText2() {
     ctx.fillRect(0, 0, canvas.width, canvas.height);
     ctx.fillStyle = "black";
     ctx.font = "48px cursive";
-    ctx.fillText("Happy Valentines Day Mai", canvas.width / 3 , canvas.height / 3);
+    ctx.fillText("Happy Valentines Day Mai", canvas.width / 4 , canvas.height / 3);
 
     setTimeout(()=> {
-        ctx.fillText("Can't Wait For Many More", canvas.width / 3, canvas.height / 2.5);
+        ctx.fillText("Can't Wait For Many More", canvas.width / 4, canvas.height / 2.5);
     }, 4000);
 
     setTimeout(()=> {
-        ctx.fillText("Love Reuben <3", canvas.width / 3 , canvas.height / 2 );
+        ctx.fillText("Love Reuben <3", canvas.width / 4 , canvas.height / 2 );
     }, 8000);
         
 }

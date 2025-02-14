@@ -26,6 +26,7 @@ const imagePaths = [
     './vday34.jpg',
     './vday3.jpg',
     './vday11.jpg',
+    './vday52.jpg',
     './vday6.JPG',
     './vday4.JPG',
     './vday7.JPG',
@@ -40,11 +41,13 @@ const imagePaths = [
     './vday43.JPG',
     './vday16.jpg',
     './vday18.jpg',
+    './vday51.jpg',
     './vday2.jpeg',
     './vday15.jpg',
     './vday19.jpg',
     './vday17.jpg',
-    './vday12.jpg'
+    './vday12.jpg',
+    './vday50.jpg'
 ];
 
 //console.log('script loaded!');
@@ -131,6 +134,7 @@ function draw_opening() {
         ctx.fillText("Reuben met Maité", canvas.width*.5, canvas.height*.5);
     }, 5000);
 
+
 }
 
 // function draw_interlude() {
@@ -161,60 +165,67 @@ function drawHeart(x, y, size, color) {
 
 let currentImageIndex = 0;
 let frameCounter = 0;
-const framesPerImage = 56; // Change image every 60 frames (1 second at 60fps)
 let imagesShown = 0;
-const maxImagesBeforePause = 13;
+let framesPerImage = 200; // Change image every 60 frames (1 second at 60fps)
+const maxImagesBeforePause = 16;
 const maxImagesBeforeEnd = 31;
 let isPaused = false;
 
-// Animation loop
-function animate() {
-    if (isPaused) return;
+let animationRunning = false;
 
-    ctx.fillStyle = backgroundColor; // Use the background color
-    ctx.fillRect(0, 0, canvas.width, canvas.height); // Fill the canvas with the background color
+function animate() {
+    if (isPaused || animationRunning) return;
+    animationRunning = true;  // Prevent multiple animation loops
+
+    ctx.fillStyle = backgroundColor;
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
 
     hearts.forEach(heart => {
         drawHeart(heart.x, heart.y, heart.size, heart.color);
-        heart.y -= heart.speed; // Move hearts upward
-        if (heart.y < -heart.size) heart.y = canvas.height; // Reset position
+        heart.y -= heart.speed;
+        if (heart.y < -heart.size) heart.y = canvas.height;
     });
 
-    // Draw two images at a time
     for (let i = 0; i < 2; i++) {
         const image = imageObjects[(currentImageIndex + i) % imageObjects.length];
         ctx.drawImage(image.img, image.x, image.y, image.width, image.height);
-        image.y -= image.speed; // Move images upward
+        image.y -= image.speed;
         if (image.y < -image.height) {
-            image.y = canvas.height; // Reset position
-            image.x = Math.random() * (canvas.width - image.width); // Reset x position to a new random value
+            image.y = canvas.height;
+            image.x = Math.random() * (canvas.width - image.width);
         }
-    };
-    //imagesShown ++; 
+    }
+
     frameCounter++;
     if (frameCounter >= framesPerImage) {
         frameCounter = 0;
         currentImageIndex = (currentImageIndex + 1) % imageObjects.length;
         imagesShown++;
-    };
+    }
 
-    if (imagesShown === maxImagesBeforePause || imagesShown == maxImagesBeforePause+1 ) {
+    if (imagesShown === maxImagesBeforePause || imagesShown === maxImagesBeforePause + 1) {
         isPaused = true;
-        setTimeout(() => {
-            showBlackScreenWithText();
-        }, 1000); // Pause for 1 second before showing the black screen
+        showBlackScreenWithText();
+        // setTimeout(() => {
+        //     showBlackScreenWithText();
+        // }, 1000);
     } else if (imagesShown >= maxImagesBeforeEnd) {
         isPaused = true;
         setTimeout(() => {
             showBlackScreenWithText2();
-        }, 1000); // Pause for 1 second before showing the second black screen
+        }, 1000);
     } else {
-        requestAnimationFrame(animate);
-    };
+        requestAnimationFrame(() => {
+            animationRunning = false;
+            animate();
+        });
+    }
 }
 
 function showBlackScreenWithText() {
     isPaused = false;
+    animationRunning = false;
+    framesPerImage = 250
     frameCounter = 0;
     ctx.fillStyle = tempBackgroundColor;
     ctx.fillRect(0, 0, canvas.width, canvas.height);
@@ -224,7 +235,7 @@ function showBlackScreenWithText() {
     setTimeout(() => {
         imagesShown = maxImagesBeforePause+2;
          // Reset the counter
-        requestAnimationFrame(animate);
+         requestAnimationFrame(animate);
     }, 3000); // Show the black screen with text for 3 seconds
 }
 

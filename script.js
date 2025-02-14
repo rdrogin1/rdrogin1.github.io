@@ -14,24 +14,24 @@ const tempBackgroundColor = "#000000"; // Set temporary background color to blac
 
 // Array to store image objects
 const imagePaths = [
-    'vday23.jpg', //her
-    'vday26.JPG',//me
-    'vday40.jpg', //her
-    'vday27.jpg',//me
-    'vday28.jpg',//me, nex we have early picsearly pics
-    'vday34.JPG',
-    'vday41.jpg', //pike couch
-    'vday31.JPG',//tongues selfie
-    'vday32.JPG',//leg selfie
-    'vday3.JPG',//cute formal
-    'vday33.JPG', //hawaian shirt selfie
-    'vday30.JPG',//cute library
-    'vday6.JPG',
-    'vday11.JPG', // last pic before love grew transition
+    './vday23.jpg', //her
+    './vday26.JPG',//me
+    './vday40.jpg', //her
+    './vday27.jpg',//me
+    './vday28.jpg',//me, nex we have early picsearly pics
+    './vday34.JPG',
+    './vday41.jpg', //pike couch
+    './vday31.JPG',//tongues selfie
+    './vday32.JPG',//leg selfie
+    './vday3.JPG',//cute formal
+    './vday33.JPG', //hawaian shirt selfie
+    './vday30.JPG',//cute library
+    './vday6.JPG',
+    './vday11.JPG', // last pic before love grew transition
 ];
 
-console.log('script loaded!');
-alert('script loaded!');
+//console.log('script loaded!');
+//alert('script loaded!');
 
 const imageObjects = [];
 
@@ -53,9 +53,15 @@ imagePaths.forEach(path => {
             speed: Math.random() * .8
         });
         console.log(`Image loaded: ${path}, width: ${img.width}, height: ${img.height}`);
-        if (imagesLoaded === imagePaths.length) {
-            console.log('Button clicked!');
-            alert('Button clicked!');
+    };
+    img.onerror = () => {
+        console.log(imagesLoaded);
+        console.log('Failed load!');
+        alert(`Failed to load image: ${path}`);
+        alert(imagesLoaded);
+    };
+            //console.log('Button clicked!');
+            //alert('Button clicked!');
             // All images are loaded, enable the start button
             startButton.addEventListener("click", () => {
                 //console.log('Button clicked!');
@@ -78,14 +84,8 @@ imagePaths.forEach(path => {
                     animate(); // Start the animation after a delay
                 }, 6040); // 1040 milliseconds = 1.04 seconds, i like 6040 for the time
             });
-        }
-    };
-    img.onerror = () => {
-        console.log(imagesLoaded);
-        console.log('Failed load!');
-        alert(`Failed to load image: ${path}`);
-        alert(imagesLoaded);
-    };
+        
+   
 });
 
 // Create random hearts

@@ -252,7 +252,7 @@ function showBlackScreenWithText2() {
     }, 4000);
 
     setTimeout(()=> {
-        ctx.fillText("Love Reuben <3", canvas.width / 4 , canvas.height / 2 );
+        ctx.fillText("Love Reuben <3xxoo", canvas.width / 4 , canvas.height / 2 );
     }, 8000);
         
 }
